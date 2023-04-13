@@ -26,11 +26,6 @@
         font-size: 24px;
     }
 
-    /* Элементы в одну строку */
-    .div1 {
-        display: inline-block;
-    }
-
     /* Стиль кнопки вверх */
     .page-up-transparent {
         filter: alpha(Opacity=50);
