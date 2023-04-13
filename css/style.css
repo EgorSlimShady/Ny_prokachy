@@ -1,0 +1,40 @@
+/* Стиль аккордеона */
+    .accordion {
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 15px;
+        color: blue;
+    }
+    
+    .active, .accordion:hover {
+        color: purple; 
+    }
+    
+    .panel {
+        /* padding: 0 18px; */
+        display: none;
+        background-color: transparent;
+        overflow: hidden;
+    }
+
+    /* Стиль кнопки вверх */
+    .topbtn {
+        position: fixed;
+        right: 45px;
+        bottom: 45px;
+        text-decoration: none;
+        font-size: 24px;
+    }
+
+    /* Элементы в одну строку */
+    .div1 {
+        display: inline-block;
+    }
+
+    /* Стиль кнопки вверх */
+    .page-up-transparent {
+        filter: alpha(Opacity=50);
+        opacity: 0.5;
+        width: 45px;
+        height: 45px;
+    }
