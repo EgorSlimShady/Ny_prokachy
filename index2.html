@@ -3,172 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index 2</title>
 
-    <link rel="icon" type="image" href="image/logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="main.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/main.css" rel="stylesheet">
 
 </head>
-<body>
-    <!-- begin -->
+<body class="text-center">
     <div class="limiter">
-        <div class="container-login" style="background-image: url('image/bg.jpg');">
-    
-            <!-- Цветной квадрат -->
-            <div class="wrap-login">
-                <!-- Контейнер верхней части -->
-                <form class="login-form">
-                    <img src="image/logo.png" width="240" height="240" class="login-form-logo">
-                    <span class="login-form-title">
-                        Авторизуйся
-                    </span>
-    <!-- end -->
+<main class="form-signin">
+    <div class="container-login" style="background-image: url('image/bg.jpg');">
+    <form>
+        <img class="mb-4" src="image/logo.png" alt="" width="240" height="240">
+        <h1 class="h3 mb-3 fw-normal">Авторизуйся</h1>
 
-    <div class="container mt-5 pt-5 pb-5">
-        <div class="col-md-6 offset-md-3">
-            <form id="np">
-                
-                
-                <!-- <div class="form-group wrap-input validate-input">
-                    <input type="text" name="surname" class="form-control" required>
-                </div>
-                 -->
-                <div class="form-group wrap-input validate-input" data-validate="Введите фамилию">
-                    <input class="form-control input" type="text" name="surname" placeholder="Фамилия">
-                    <span class="focus-input"></span>
-                </div>
-                
-                <!-- /.surname -->
-
-                <div class="form-group">
-                    <label class="form-label">Имя</label>
-                    <input type="text" name="name" class="form-control" required>
-                </div>
-                <!-- /.name -->
-
-                <div class="form-group">
-                    <label class="form-label">Отчество</label>
-                    <input type="text" name="fathername" class="form-control" required>
-                </div>
-                <!-- /.fathername -->
-
-                <div class="form-group">
-                    <label class="form-label">Телефон</label>
-                    <input type="tel" name="tel" class="form-control maska_tel" required>
-                </div>
-                <!-- /.tel -->
-    
-                <div class="form-group">
-                    <label class="form-label">Выберите файл</label>
-                    <input type="file" name="doc" class="form-control" id="formFile" required>
-                </div>
-                <!-- /.form-group -->
-
-                <div id="success" class="alert alert-success mt-3" role="alert" style="display: none; border-radius: 0.25;"></div>
-                <!-- Уведомление об успехе -->
-
-                <div>   
-                <button type="submit" id="btn" class="btn btn-primary mt-4">Поехали!</button>
-                </div>
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-
-    <script>
-        const TOKEN = "6053368284:AAEI46UybhGjc0_--nO5Sf7bZQwb6aDltLs";
-        const CHAT_ID = "-1001918851256";
-        const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendDocument`;
-        const success = document.getElementById('success');
-        let message = "";
-
-        document.getElementById('np').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const formData = new FormData();
-            formData.append('chat_id', CHAT_ID);
-            formData.append('document', this.document.files[0]);
-
-            // message += `Оферта с сайта!\n`;
-            message += `Фамилия: ${ this.surname.value }\n`;
-            message += `Имя: ${ this.name.value }\n`;
-            message += `Отчество: ${ this.fathername.value }\n`;
-            message += `Телефон: ${ this.tel.value }`;
-
-            formData.append('caption', message);
-            
-            axios.post(URL_API,
-            formData, {
-                        headers: {'Content-Type': 'multipart/form-data'}
-                      })
-            // {
-                // chat_id: CHAT_ID,
-                // parse_mode: 'html',
-                // text: message
-            // })
-            .then((res) =>
-            {
-                this.surname.value = "";
-                this.name.value = "";
-                this.fathername.value = "";
-                this.tel.value = "";
-                // this.chbx.checked = false;
-                // this.btn.disabled = true;
-                success.innerHTML = "Активация прошла успешно!";
-                success.style.display = "block";
-                setTimeout(function()
-                    {
-	                    success.style.display = 'none';
-                    }, 3500);
-            })
-            .catch((err) =>
-            {
-                console.log(err);
-            })
-            .finally(() =>
-            {
-                console.log('END!');
-            })
-        })
-    </script>
-
-
-
-                <!-- Текстбоксы -->
-                <div class="wrap-input validate-input" data-validate="Введите фамилию">
-                    <input class="input" type="text" name="surname" placeholder="Фамилия">
-                    <span class="focus-input"></span>
-                </div>
-
-                <div class="wrap-input validate-input" data-validate="Введите имя">
-                    <input class="input" type="text" name="name" placeholder="Имя">
-                    <span class="focus-input"></span>
-                </div>
-
-                <div class="wrap-input validate-input" data-validate="Введите отчество">
-                    <input class="input" type="text" name="fathername" placeholder="Отчество">
-                    <span class="focus-input"></span>
-                </div>
-
-                <div class="wrap-input validate-input" data-validate="Введите номер телефона">
-                    <input class="input" type="tel" name="tel" placeholder="Номер телефона">
-                    <span class="focus-input"></span>
-                </div>
-
-                <!-- Кнопка -->
-                <div class="container-login-form-btn">
-                    <button class="login-form-btn">
-                        Поехали!
-                    </button>
-                </div>
-            </form>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="surname" required>
+            <label for="floatingInput">Фамилия</label>
         </div>
-    </div>
-</div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name" required>
+            <label for="floatingInput">Имя</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="fathername"required>
+            <label for="floatingInput">Отчество</label>
+        </div>
+        <div class="form-floating">
+            <input type="tel" class="form-control" id="floatingTel" placeholder="tel"required>
+            <label for="floatingTel">Телефон</label>
+        </div>
 
+        <div class="checkbox mb-3">
+            <label>
+            <input type="checkbox" value="remember-me"> Согласен со всем</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Поехали!</button>
+    </form>
+    </div>
+</main>
+    </div>
 </body>
 </html>
