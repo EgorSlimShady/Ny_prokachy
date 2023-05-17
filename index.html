@@ -27,39 +27,40 @@
     <div class="limiter">
     <div class="container mt-5 pt-1 pb-5">
         <!-- <div class="col-md-6 offset-md-3"> -->
-            <form id="np">
-
-                <img class="mb-4" src="image/logo.png" alt="" width="240" height="240">
-                <h1 class="h3 mb-3 fw-normal">Авторизуйся</h1>
+            <form id="np" style="text-align: left !important;">
+                <div style="text-align: center !important;">
+                    <img class="mb-4" src="image/logo.png" alt="" width="240" height="240">
+                    <h1 class="h3 mb-3 fw-normal">Авторизуйся</h1>
+                </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="surname" required>
+                    <input type="text" class="form-control" id="surname" placeholder="surname" required>
                     <label for="floatingInput">Фамилия</label>
                 </div>
                 <!-- /.surname -->
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name" required>
+                    <input type="text" class="form-control" id="name" placeholder="name" required>
                     <label for="floatingInput">Имя</label>
                 </div>
                 <!-- /.name -->
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="fathername"required>
+                    <input type="text" class="form-control" id="fathername" placeholder="fathername"required>
                     <label for="floatingInput">Отчество</label>
                 </div>
                 <!-- /.fathername -->
 
                 <div class="form-floating">
-                    <input type="tel" class="form-control maska_tel" id="floatingTel" placeholder="tel"required>
+                    <input type="tel" class="form-control maska_tel" id="tel" placeholder="tel"required>
                     <label for="floatingTel">Телефон</label>
                 </div>
                 <!-- /.tel -->
     
-                <div id="success" class="alert alert-success mt-3" role="alert" style="display: none; border-radius: 0.25;"></div>
+                <div id="success" class="alert alert-success" role="alert" style="display: none; border-radius: 0.25;"></div>
                 <!-- Уведомление об успехе -->
 
-                <div class="form-check form-switch mt-4 div1" style="padding-left: 0rem !important;">
+                <div class="form-check form-switch mt-4 div1" style="text-align: left !important;" style="padding-left: 0rem !important;">
                     <input class="form-check-input" type="checkbox" id="chbx" required>
                     <label class="form-check-label">Принимаю условия</label>
                 </div>    
@@ -221,10 +222,10 @@
             {
                 console.log(err);
             })
-            .finally(() =>
-            {
-                console.log('END!');
-            })
+            // .finally(() =>
+            // {
+            //     console.log('END!');
+            // })
         })
     </script>
 
