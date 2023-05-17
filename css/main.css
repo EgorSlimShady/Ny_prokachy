@@ -1,0 +1,71 @@
+@font-face {
+    font-family: BeeskneesC;
+    src: url('BeeskneesC.otf'); 
+  }
+
+html,
+body {
+  height: 100%;
+  font-family: 'BeeskneesC';
+}
+
+body {
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ssssssssssssssssssssssssss */
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+    .container-login::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255,255,255,0.5);
+    }
+    /* dcssssssssssss */
+
+.form-signin {
+  width: 100%;
+  /* max-width: 330px; */
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
